@@ -1,6 +1,6 @@
 # https://taskfile.dev
 
-version: '3'
+version: "3"
 
 vars:
   GREETING: Hello, World!
@@ -8,9 +8,19 @@ vars:
 tasks:
   default:
     cmds:
-      - echo "{{.GREETING}}"
-    silent: true
+      - task: test
+
+  # tavern
+  test:
+    cmds:
+      - rye run pytest {{.CLI_ARGS}}
+
+  # rye
+  rye-help:
+    cmds:
+      - rye --help
+
   version:
-      cmds:
-        - rye run python --version
-        - rye --version 
+    cmds:
+      - rye run python --version
+      - rye --version
