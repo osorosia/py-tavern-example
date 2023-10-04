@@ -5,7 +5,9 @@ description = "Add your description here"
 authors = [
     { name = "osorosia", email = "64416398+osorosia@users.noreply.github.com" }
 ]
-dependencies = []
+dependencies = [
+    "tavern>=2.3.0",
+]
 readme = "README.md"
 requires-python = ">= 3.8"
 
